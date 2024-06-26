@@ -6,7 +6,7 @@ from snowflake.snowpark.functions import col, when_matched
 st.title(":cup_with_straw: Pending smoothie orders :cup_with_straw:")
 st.write("""Orders that need to be filled.""")
 
-#session = get_active_session()
+session = get_active_session()
 my_dataframe = session.table("smoothies.public.orders").select(col('ORDER_FILLED'),col('NAME_ON_ORDER'),col('INGREDIENTS'),col('ORDER_UID'))
 
 if my_dataframe:
