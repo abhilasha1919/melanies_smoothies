@@ -20,7 +20,7 @@ if ingredients_list:
 
         for fruits_chosen in ingredients_list:
                 ingredients_string += fruits_chosen + ' '
-                st.subheader(fruits_chosen + 'Nutrition Information')
+                #st.subheader(fruits_chosen + 'Nutrition Information')
         
                 my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
                 values('""" + ingredients_string + """' , '"""+name_on_order+"""')"""
